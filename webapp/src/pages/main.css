@@ -171,7 +171,7 @@ p {
 
   background: linear-gradient(270deg, rgba(79, 12, 187, 0) 0%, #191b27 100%);
 
-  background-color: rgb(255, 212, 11, 0.7); /* Initial background color */
+  background-color: #ffc8dd; /* Initial background color */
   transition: background-color 0.3s ease; /* Transition for smooth color change */
 
   /* shadow-right */
