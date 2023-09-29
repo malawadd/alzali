@@ -60,7 +60,7 @@ export function Connect() {
           </a>
           <button
             className="hbutton hbutton-lnk"
-            style={{ paddingLeft: 0, textTransform: 'none' }}
+            style={{ paddingLeft: 0, textTransform: 'none', outline: 'none',  padding: 10 }}
             onClick={() => disconnect()}
           >
             <span>Disconnect</span>
@@ -83,7 +83,7 @@ export function Connect() {
           className="hbutton hbutton-lnk"
           disabled={!metamask.ready}
           key={metamask.id}
-          style={{ textTransform: 'none' }}
+          style={{ textTransform: 'none' ,  padding: 10 }}
           onClick={() => connect({ connector: metamask })}
         >
           <img src={metamaskLogo} alt="" width={24} />
@@ -99,7 +99,7 @@ export function Connect() {
           className="hbutton hbutton-lnk"
           disabled={!walletConnect.ready}
           key={walletConnect.id}
-          style={{ textTransform: 'none' }}
+          style={{ textTransform: 'none' ,  padding: 10}}
           onClick={() => connect({ connector: walletConnect })}
         >
           <img src={walletConnectLogo} alt="" width={24} />

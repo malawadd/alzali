@@ -329,11 +329,11 @@ p {
 }
 
 .hbutton-lnk {
-  background: none;
+  background: #bde0fe;
 
   /* accent */
 
-  color: #ffc8dd;
+  color: #283618;
 }
 
 .hbutton:active {
@@ -527,7 +527,7 @@ p {
 
   .hbutton-lnk:hover:disabled {
     background: none;
-    color: #cdb4db !important;
+    color: #bde0fe !important;
   }
 }
 
@@ -598,6 +598,7 @@ p {
 
   .hbutton {
     padding: 8px;
+    color: #bde0fe
   }
 
   .footer {

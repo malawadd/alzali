@@ -34,7 +34,7 @@ export function Network() {
             .map((chain) => (
               <button
                 className="hbutton hbutton-lnk"
-                style={{ paddingLeft: 0, textTransform: 'none' }}
+                style={{ paddingLeft: 0, textTransform: 'none' ,  padding: 10 }}
                 key={chain.id}
                 onClick={() => switchNetwork(chain.id)}
               >
