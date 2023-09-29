@@ -15,5 +15,5 @@ export const stealthAddress: AddrMapType = {
 
 export const explorer: MapType = {
   31: 'https://explorer.testnet.rsk.co',
-  355113: ''
+  355113: 'https://explorer.bitfinity.network'
 }
