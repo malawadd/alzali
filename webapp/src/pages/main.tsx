@@ -1,5 +1,8 @@
 import logo from './../logo.svg';
 import { Connect } from '../components/connect';
+import { Network } from '../components/network';
+
+import './main.css';
 
 export function Main() {
         return (
@@ -9,6 +12,7 @@ export function Main() {
                     <div className="header-h">
                         <div className="header-item">
                             <Connect />
+                            <Network />
                         </div>
                     </div>
                 </div>

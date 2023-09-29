@@ -18,7 +18,7 @@
 }
 
 .dropdown-head span {
-  color: #e8e8e9;
+  color: #cdb4db;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
@@ -32,6 +32,7 @@
 
 .dropdown-head .arrow-down {
   transform: rotate(180deg);
+  color: #cdb4db
 }
 /*
 .dropdown-head:hover .arrow-down {
@@ -57,10 +58,10 @@
 
   /* base */
 
-  background: #191b27;
+  background: #a2d2ff;
   /* shadow down */
 
-  box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 16px 16px #a2d2ff;
   border-radius: 8px;
 
   /* Inside auto layout */
@@ -81,7 +82,7 @@
 }
 
 .dropdown-body a.text {
-  color: #e8e8e9;
+  color: #cdb4db;
 }
 
 .dropdown-body button {

@@ -53,7 +53,7 @@ export function Connect() {
             className="text"
           >
             {balance
-              ? `${formatEtherTruncated(balance?.value)} ${
+              ? `${balance?.value} ${
                   chain?.nativeCurrency.symbol
                 }`
               : '...'}
