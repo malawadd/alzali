@@ -1,20 +1,35 @@
+import { useState } from 'react';
+
 import Logo from '../assets/logo.png';
 import Shield from '../assets/shield.svg';
 import SendReceive from '../assets/send-receive.svg';
 
 import { Connect } from '../components/connect';
 import { Network } from '../components/network';
+
 import { useNetwork } from 'wagmi';
+import { stealthAddress, explorer } from '../utils/constants';
 
 import AddressProvider from '../components/address';
-
 import { AlzilID } from '../components/alzilid';
+import { Send } from '../components/send';
+// import { Withdraw } from '../components/withdraw';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faArrowRight,
+    faArrowTurnDown
+  } from '@fortawesome/free-solid-svg-icons';
 
 import './main.css';
 
 export function Main() {
+    const [activeTab, setActiveTab] = useState<string>('send');
+
     const { chain } = useNetwork();
+    const contractAddress = stealthAddress[chain?.id ||  31 || 355113];
+    const explorerAddress = explorer[chain?.id || 31 || 355113];
+
         return (
  
             <section className="layout">
@@ -65,6 +80,51 @@ export function Main() {
 
                     <AddressProvider>
                         <AlzilID />
+
+                        
+                        <div className="large-block">
+                            <div className="nav-tabs">
+                            <div
+                                className={activeTab === 'send' ? 'tab active' : 'tab'}
+                                onClick={() => setActiveTab('send')}
+                            >
+                                <h2>
+                                <FontAwesomeIcon icon={faArrowRight} />
+                                &nbsp; Send
+                                </h2>
+                                <span className="super">
+                                {chain?.nativeCurrency.symbol || 'BNB'}
+                                </span>
+                            </div>
+                            <div
+                                className={activeTab === 'withdraw' ? 'tab active' : 'tab'}
+                                onClick={() => setActiveTab('withdraw')}
+                            >
+                                <h2>
+                                <FontAwesomeIcon icon={faArrowTurnDown} flip="horizontal" />
+                                &nbsp; Receive
+                                </h2>
+                                <span className="super">
+                                {chain?.nativeCurrency.symbol || 'BNB'}
+                                </span>
+                            </div>
+                            </div>
+
+                            <div
+                            className="pane"
+                            style={{ display: activeTab === 'send' ? 'block' : 'none' }}
+                            >
+                            <Send />
+                            </div>
+                            <div
+                            className="pane"
+                            style={{
+                                display: activeTab === 'withdraw' ? 'block' : 'none',
+                            }}
+                            >
+                            {/* <Withdraw /> */}
+                            </div>
+                        </div>
 
                     </AddressProvider>
                 </div>
