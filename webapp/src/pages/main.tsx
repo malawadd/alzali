@@ -13,7 +13,7 @@ import { stealthAddress, explorer } from '../utils/constants';
 import AddressProvider from '../components/address';
 import { AlzilID } from '../components/alzilid';
 import { Send } from '../components/send';
-// import { Withdraw } from '../components/withdraw';
+import { Withdraw } from '../components/withdraw';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -57,7 +57,7 @@ export function Main() {
                     <div className="promo large-block">
                         <h1>
                         Introducing <span className="promo-accent">Anonymous</span> & <span className="promo-accent">Effortless</span>
-                            <br /> Transfers on the {chain?.name.split(' ')[0] || 'RSK'} Network
+                            <br /> Transfers on the {chain?.name.split(' ')[0] || 'blockchain'} Network
                         </h1>
 
                         <div className="benefits">
@@ -71,7 +71,7 @@ export function Main() {
                             <div className="item">
                                 <img src={SendReceive} alt="" width={24} />
                                 <p>
-                                    Send and receive {chain?.nativeCurrency.symbol || 'tRBTC'}{' '}
+                                    Send and receive {chain?.nativeCurrency.symbol || 'token'}{' '}
                                     <strong>privately</strong>
                                 </p>
                             </div>
@@ -93,7 +93,7 @@ export function Main() {
                                 &nbsp; Send
                                 </h2>
                                 <span className="super">
-                                {chain?.nativeCurrency.symbol || 'BNB'}
+                                {chain?.nativeCurrency.symbol || 'token'}
                                 </span>
                             </div>
                             <div
@@ -105,7 +105,7 @@ export function Main() {
                                 &nbsp; Receive
                                 </h2>
                                 <span className="super">
-                                {chain?.nativeCurrency.symbol || 'BNB'}
+                                {chain?.nativeCurrency.symbol || 'token'}
                                 </span>
                             </div>
                             </div>
@@ -122,7 +122,7 @@ export function Main() {
                                 display: activeTab === 'withdraw' ? 'block' : 'none',
                             }}
                             >
-                            {/* <Withdraw /> */}
+                            <Withdraw />
                             </div>
                         </div>
 
@@ -133,3 +133,6 @@ export function Main() {
         );
 
 }
+
+//https://explorer.testnet.rsk.co/tx/0xdf1596db6e9b9b94c540bb45eb054f77899e7e57729b0350c1846d0b2422d562
+//https://https//explorer.testnet.rsk.co/tx/0xdf1596db6e9b9b94c540bb45eb054f77899e7e57729b0350c1846d0b2422d562
